@@ -1,0 +1,12 @@
+FROM python:3.10-alpine
+
+ADD Backend/reqirement.txt /app/reqirement.txt
+
+WORKDIR /app
+
+RUN pip install -r reqirement.txt
+
+ADD Backend /app
+
+CMD ["python", "app.py"]
+

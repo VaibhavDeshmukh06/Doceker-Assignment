@@ -1,0 +1,8 @@
+FROM node:24-alpine
+
+ADD Frontend /app
+
+RUN npm install -y
+
+CMD ["npm", "start"]
+
